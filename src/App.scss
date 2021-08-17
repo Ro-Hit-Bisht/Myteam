@@ -1,0 +1,59 @@
+@use "./Sass/global";
+@use "./Sass/variable" as Var;
+@use "./Sass/typography" as Typo;
+
+#root {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  #Navbar {
+    background-color: Var.$color-primary-green;
+    height: 8rem;
+  }
+
+  #Header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: Var.$color-primary-green;
+    background-image: url("./Assets/svgs/bg-pattern-home-2.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  #Main {
+    background-color: Var.$color-secondary-dark-green-1;
+    overflow: hidden;
+  }
+
+  #Contact_Section {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: Var.$color-primary-coral;
+    background-image: url("./Assets/svgs/bg-pattern-contact-section.svg");
+    background-size: 10rem;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
+  #Footer {
+    background-color: Var.$color-secondary-dark-green-3;
+    color: Var.$color-primary-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) {
+  #root {
+    #Navbar {
+    }
+  }
+}

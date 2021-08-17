@@ -1,0 +1,25 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#Contact_Section_Heading {
+  color: Var.$color-secondary-dark-green-3;
+  margin-bottom: 1rem;
+}
+
+#Contact_Section_Btn {
+  color: Var.$color-secondary-dark-green-3;
+  width: 10rem;
+  height: 3rem;
+  border-color: Var.$color-secondary-dark-green-3;
+  border-style: solid;
+  border-radius: 3rem;
+  background-color: transparent;
+  transition: transform 0.5s ease;
+  margin-top: 1rem;
+}
+
+#Contact_Section_Btn:hover {
+  color: Var.$color-primary-white;
+  background-color: Var.$color-secondary-dark-green-3;
+  transform: scale(1.1, 1.05);
+}

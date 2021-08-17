@@ -1,0 +1,18 @@
+@use "../../Sass/variable" as Var;
+
+#About_Director {
+  display: grid;
+  color: Var.$color-primary-white;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 5rem;
+  margin: 5rem 0 5rem 0;
+
+  #Grid1 {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#Nav_Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #Logo {
+    position: relative;
+    left: 5vw;
+    margin: 0 10vw 0 0;
+  }
+
+  #Desk_Link {
+    display: none;
+  }
+
+  #Desk_Navbtn {
+    display: none;
+  }
+
+  #Mob_Nav_Burger {
+    position: relative;
+    right: 8vw;
+    cursor: pointer;
+  }
+
+  #Mob_Slider {
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 5;
+    background-color: Var.$color-primary-green;
+    background-image: url("../../Assets/svgs/bg-pattern-mobile-nav-1.svg"),
+      url("../../Assets/svgs/bg-pattern-mobile-nav-2.svg");
+    background-repeat: no-repeat;
+    background-position: -18.75vw 400px, 31.25vw 90%;
+    background-size: 75%, 75%;
+    transition: transform 1s cubic-bezier(0, 0.71, 0.29, 1.46);
+
+    #Mob_Nav_Close {
+      position: absolute;
+      top: 3.5rem;
+      right: 0;
+      transform: translateX(-8vw);
+      cursor: pointer;
+    }
+
+    #Mob_Link {
+      margin: 8rem 0 0 13%;
+
+      li {
+        margin-bottom: 2rem;
+        list-style: none;
+
+        a {
+          color: Var.$color-primary-white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #Mob_Navbtn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 3rem;
+      color: Var.$color-primary-white;
+      width: 80%;
+      height: 6%;
+      border-color: Var.$color-primary-white;
+      border-style: solid;
+      border-radius: 3rem;
+      background-color: transparent;
+      transition: transform 0.5s ease;
+    }
+
+    #Mob_Navbtn:hover {
+      color: Var.$color-primary-green;
+      background-color: Var.$color-primary-white;
+      transform: translateX(-50%) scale(1.1, 1.05);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #Nav_Container {
+    justify-content: flex-start;
+
+    #Desk_Link {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 8rem;
+      height: 3rem;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: Var.$color-primary-white;
+        }
+      }
+    }
+
+    #Desk_Navbtn {
+      display: block;
+      background-color: transparent;
+      width: 10rem;
+      height: 3rem;
+      border-color: Var.$color-primary-white;
+      border-style: solid;
+      border-radius: 3rem;
+      position: absolute;
+      right: 5vw;
+
+      a {
+        text-decoration: none;
+        color: Var.$color-primary-white;
+      }
+    }
+
+    #Mob_Nav_Burger {
+      display: none;
+    }
+
+    #Mob_Slider {
+      display: none;
+    }
+  }
+}

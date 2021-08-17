@@ -1,0 +1,26 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#Home_Header_Heading {
+  width: 50%;
+  text-align: center;
+  color: Var.$color-primary-white;
+  margin: 2rem 0 2rem 0;
+
+  mark {
+    background-color: transparent;
+    color: Var.$color-primary-coral;
+  }
+}
+#Home_Header_Para {
+  width: 80%;
+  text-align: center;
+  color: Var.$color-primary-white;
+  margin: 0 0 15rem 0;
+
+  div {
+    display: none;
+  }
+  p {
+  }
+}

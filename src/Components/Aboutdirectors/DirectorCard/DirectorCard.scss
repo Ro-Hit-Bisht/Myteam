@@ -1,0 +1,92 @@
+@use "../../../Sass/variable" as Var;
+
+.Card_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .Card {
+    width: 85%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 1s linear;
+    background-color: Var.$color-secondary-dark-green-2;
+
+    .Front_Face {
+      // background-color: Var.$color-secondary-dark-green-2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+
+      .Profil_Pic {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border: 2px solid Var.$color-secondary-light-blue-2;
+        margin: 1rem 0 1rem 0;
+      }
+
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        background-color: Var.$color-primary-coral;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        transform: translateY(50%);
+        cursor: pointer;
+        transition: all 1s linear;
+
+        img {
+          transition: 1s linear;
+        }
+      }
+    }
+
+    .Back_Face {
+      // background-color: Var.$color-secondary-dark-green-2;
+      position: absolute;
+      inset: 0 0 0 0;
+      z-index: -1;
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+
+      h3 {
+        margin: 2rem auto 1rem;
+        text-align: center;
+      }
+
+      p {
+        margin: 0 auto 2rem;
+        width: 75%;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem auto 1rem;
+        width: 25%;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+}

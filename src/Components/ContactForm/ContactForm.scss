@@ -1,0 +1,82 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#Contact {
+  margin: 3rem 0 4rem 0;
+  display: flex;
+  color: Var.$color-primary-white;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    margin-bottom: 4rem;
+    text-align: center;
+    color: Var.$color-primary-coral;
+  }
+
+  div {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+    }
+    h3 {
+      width: 60%;
+    }
+  }
+}
+
+#Contact_Form {
+  margin: 3rem 0 0 0;
+  background-image: url("../../Assets/svgs/bg-pattern-contact-2.svg");
+  background-repeat: no-repeat;
+  background-position: 135% 100%;
+  background-size: 40%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      width: 90%;
+      height: 2.5rem;
+      border-style: none;
+      // border-top: solid Var.$color-secondary-light-blue-2 0.1rem;
+      border-bottom: solid Var.$color-secondary-light-blue-2 0.1rem;
+      border-radius: 0.5rem;
+      padding: 0 0.5rem 0 0.5rem;
+      outline: none;
+      background-color: Var.$color-primary-green;
+      color: Var.$color-primary-white;
+    }
+
+    textarea {
+      border-style: none;
+      // border-top: solid Var.$color-secondary-light-blue-2 0.1rem;
+      border-bottom: solid Var.$color-secondary-light-blue-2 0.1rem;
+      border-radius: 0.5rem;
+      width: 90%;
+      padding: 0.5rem 0.5rem 0 0.5rem;
+      outline: none;
+      background-color: Var.$color-primary-green;
+      color: Var.$color-primary-white;
+    }
+
+    button {
+      margin: 4rem 0 10rem 0;
+      color: Var.$color-primary-white;
+      width: 10rem;
+      height: 3rem;
+      border-color: Var.$color-primary-white;
+      border-style: solid;
+      border-radius: 3rem;
+      background-color: transparent;
+    }
+  }
+}

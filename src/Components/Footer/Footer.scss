@@ -1,0 +1,43 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#Logo_Link {
+  img {
+    margin: 3rem 0 2rem 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    li {
+      list-style: none;
+
+      a {
+        color: Var.$color-primary-white;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#Contact_Info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#Social_Links {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    li {
+      list-style: none;
+    }
+  }
+  p{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

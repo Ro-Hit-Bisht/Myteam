@@ -1,0 +1,32 @@
+@use "../../Sass/variable" as Var;
+@use "../../Sass/typography" as Typo;
+
+#About_Client {
+  color: Var.$color-primary-white;
+  background-color: Var.$color-secondary-dark-green-2;
+  background-image: url("../../Assets/svgs/bg-pattern-about-4.svg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  overflow: hidden;
+
+  h1 {
+    text-align: center;
+    margin: 5rem 0 0 0;
+  }
+
+  #Clients {
+    margin: 0 auto 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    img {
+      margin: 4rem 0.5rem 0;
+      height: 1.5rem;
+      width: 6.5rem;
+      min-width: 100px;
+      min-height: 23px;
+    }
+  }
+}

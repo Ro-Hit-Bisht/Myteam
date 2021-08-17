@@ -1,0 +1,33 @@
+@use "../../../Sass/variable" as Var;
+@use "../../../Sass/typography" as Typo;
+
+#Home_Stories_Article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 0 6rem 0;
+  background-image: url("../../../Assets/svgs/icon-quotes.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  #description {
+    width: 90%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #name {
+    color: Var.$color-secondary-light-blue;
+  }
+
+  #job_position {
+  }
+
+  img {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: 2px solid Var.$color-secondary-light-blue-2;
+  }
+}

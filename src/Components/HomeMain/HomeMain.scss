@@ -1,0 +1,33 @@
+@use "../../Sass/variable" as Var;
+
+#Home_Main {
+  color: Var.$color-primary-white;
+  background-color: Var.$color-secondary-dark-green-2;
+  background-image: url("../../Assets/svgs/bg-pattern-home-3.svg");
+  background-repeat: no-repeat;
+  background-position: 140% 0%;
+  background-size: 45%;
+
+  #Home_Main_Header {
+    overflow: hidden;
+
+    #Home_Main_Dash {
+      height: 0.2rem;
+      width: 5rem;
+      background-color: Var.$color-primary-coral;
+      margin: 4rem 0 0 6vw;
+    }
+
+    #Home_Main_Heading {
+      width: 60%;
+      margin: 3rem 0 5rem 6vw;
+    }
+  }
+
+  #Home_Main_Articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
