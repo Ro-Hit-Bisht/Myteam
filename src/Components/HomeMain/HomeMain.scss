@@ -1,33 +1,58 @@
-@use "../../Sass/variable" as Var;
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
 #Home_Main {
-  color: Var.$color-primary-white;
-  background-color: Var.$color-secondary-dark-green-2;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6rem 20%;
+  background-color: Color.$color-secondary-dark-green-2;
   background-image: url("../../Assets/svgs/bg-pattern-home-3.svg");
   background-repeat: no-repeat;
-  background-position: 140% 0%;
-  background-size: 45%;
+  background-size: 14rem 16rem;
+  background-position-x: calc(100% + 7rem);
+  background-position-y: calc(100%);
 
   #Home_Main_Header {
-    overflow: hidden;
-
     #Home_Main_Dash {
-      height: 0.2rem;
-      width: 5rem;
-      background-color: Var.$color-primary-coral;
-      margin: 4rem 0 0 6vw;
+      height: 5px;
+      width: 60px;
+      background-color: Color.$color-primary-coral;
+      margin-bottom: 3rem;
     }
 
     #Home_Main_Heading {
-      width: 60%;
-      margin: 3rem 0 5rem 6vw;
+      font-size: Font.$small-heading;
+      line-height: Font.$small-heading-line-height;
+      font-weight: Font.$font-weight-semi-bold;
     }
   }
 
   #Home_Main_Articles {
-    display: flex;
+    margin: 1rem 0 1rem 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #Home_Main {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 5rem 0;
+    background-size: 10rem 12rem;
+    background-position-x: calc(100% + 5rem);
+    background-position-y: calc(0%);
+
+    #Home_Main_Header {
+      margin: 0 0 3rem 1rem;
+      #Home_Main_Heading {
+        width: 90%;
+      }
+    }
+
+    #Home_Main_Articles {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }

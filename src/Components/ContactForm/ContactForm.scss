@@ -1,82 +1,88 @@
-@use "../../Sass/variable" as Var;
-@use "../../Sass/typography" as Typo;
-
-#Contact {
-  margin: 3rem 0 4rem 0;
-  display: flex;
-  color: Var.$color-primary-white;
-  flex-direction: column;
-
-  h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  h2 {
-    margin-bottom: 4rem;
-    text-align: center;
-    color: Var.$color-primary-coral;
-  }
-
-  div {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    img {
-    }
-    h3 {
-      width: 60%;
-    }
-  }
-}
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
 #Contact_Form {
-  margin: 3rem 0 0 0;
+  width: 50%;
+  height: 40rem;
+  float: right;
+  padding: 2rem 0 0 0;
+  background-color: Color.$color-primary-green;
   background-image: url("../../Assets/svgs/bg-pattern-contact-2.svg");
   background-repeat: no-repeat;
-  background-position: 135% 100%;
-  background-size: 40%;
+  background-size: 15rem 16rem;
+  background-position-x: calc(100% + 7.5rem);
+  background-position-y: calc(100%);
 
   form {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     input {
-      width: 90%;
-      height: 2.5rem;
-      border-style: none;
-      // border-top: solid Var.$color-secondary-light-blue-2 0.1rem;
-      border-bottom: solid Var.$color-secondary-light-blue-2 0.1rem;
-      border-radius: 0.5rem;
-      padding: 0 0.5rem 0 0.5rem;
+      height: 3rem;
+      width: 55%;
+      background-color: transparent;
+      margin-bottom: 0.5rem;
+      border: none;
       outline: none;
-      background-color: Var.$color-primary-green;
-      color: Var.$color-primary-white;
+      border-bottom: 1px solid Color.$color-primary-white;
+      color: Color.$color-primary-white;
+      padding-left: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: Color.$color-primary-white;
+      opacity: 0.8;
+      font-family: Font.$font-family;
+    }
+
+    span {
+      margin: 0 0 0.5rem 1rem;
     }
 
     textarea {
-      border-style: none;
-      // border-top: solid Var.$color-secondary-light-blue-2 0.1rem;
-      border-bottom: solid Var.$color-secondary-light-blue-2 0.1rem;
-      border-radius: 0.5rem;
-      width: 90%;
-      padding: 0.5rem 0.5rem 0 0.5rem;
+      width: 55%;
+      color: Color.$color-primary-white;
+      background-color: transparent;
+      border: none;
       outline: none;
-      background-color: Var.$color-primary-green;
-      color: Var.$color-primary-white;
+      border-bottom: 1px solid Color.$color-primary-white;
+      padding: 0.5rem 0 0 1rem;
+      margin-top: 0.5rem;
     }
 
     button {
-      margin: 4rem 0 10rem 0;
-      color: Var.$color-primary-white;
-      width: 10rem;
+      width: 8rem;
       height: 3rem;
-      border-color: Var.$color-primary-white;
-      border-style: solid;
-      border-radius: 3rem;
-      background-color: transparent;
+      border: none;
+      color: Color.$color-secondary-dark-green-1;
+      font-size: Font.$font-size;
+      font-weight: Font.$font-weight-semi-bold;
+      background-color: Color.$color-primary-white;
+      border-radius: 1.5rem;
+      margin: 3rem 0rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: "560px") {
+  #Contact_Form {
+    width: 100%;
+    height: auto;
+    float: none;
+    padding: 2rem 10%;
+    background-position-x: calc(100% + 7.5rem);
+    background-position-y: calc(100% + 8rem);
+
+    form {
+      input {
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+      }
     }
   }
 }

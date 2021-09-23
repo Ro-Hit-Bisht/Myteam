@@ -16,11 +16,26 @@ function AboutClient() {
     <section id="About_Client">
       <h1>Some of our clients</h1>
       <section id="Clients">
-        <img src={verge} alt="The Verge" />
-        <img src={jakarta} alt="The Jakarta Post" />
-        <img src={guardian} alt="The Guardian" />
-        <img src={techradar} alt="Techradar" />
-        <img src={gadgets} alt="Gadgets Now" />
+        <img
+          src={`${verge}#svgView(preserveAspectRatio(none))`}
+          alt="The Verge"
+        />
+        <img
+          src={`${jakarta}#svgView(preserveAspectRatio(none))`}
+          alt="The Jakarta Post"
+        />
+        <img
+          src={`${guardian}#svgView(preserveAspectRatio(none))`}
+          alt="The Guardian"
+        />
+        <img
+          src={`${techradar}#svgView(preserveAspectRatio(none))`}
+          alt="Techradar"
+        />
+        <img
+          src={`${gadgets}#svgView(preserveAspectRatio(none))`}
+          alt="Gadgets Now"
+        />
       </section>
     </section>
   );

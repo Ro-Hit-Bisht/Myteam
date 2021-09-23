@@ -1,16 +1,7 @@
-@use "./variable" as Var;
-@use "./typography" as Typo;
-
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  font-family: Typo.$font-family;
-  body {
-  }
 }

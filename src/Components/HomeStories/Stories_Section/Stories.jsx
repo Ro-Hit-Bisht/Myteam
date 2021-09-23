@@ -40,12 +40,9 @@ const newStoriesArray = StoriesArray.map((Story) => {
   const { id, description, name, job_position, img } = Story;
   return (
     <article id="Home_Stories_Article" key={id}>
-      <p id="description">{description}</p>
-      <br />
-      <h4 id="name">{name}</h4>
-      <br />
-      <p id="job_position">{job_position}</p>
-      <br />
+      <p id="Description">{description}</p>
+      <h4 id="Name">{name}</h4>
+      <p id="Job_Position">{job_position}</p>
       <img src={img} alt={name} />
     </article>
   );

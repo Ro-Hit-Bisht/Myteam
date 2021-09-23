@@ -8,13 +8,12 @@ import "./AboutDirector.scss";
 import DirectorCard from "./DirectorCard/DirectorCard";
 
 function AboutDirector() {
-
   return (
     <section id="About_Director">
-      <article id="Grid1">
-        <h1>Meet the directors</h1>
-      </article>
-      <DirectorCard  />
+      <h1>Meet the directors</h1>
+      <section id="Cards">
+        <DirectorCard />
+      </section>
     </section>
   );
 }

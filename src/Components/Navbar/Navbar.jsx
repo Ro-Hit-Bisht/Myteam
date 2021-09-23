@@ -10,7 +10,7 @@ import logo from "../../Assets/svgs/logo.svg";
 import burger from "../../Assets/svgs/icon-hamburger.svg";
 import close from "../../Assets/svgs/icon-close.svg";
 
-function Navbar() {
+function Navbar(props) {
   const [NavbarOpen, setNavbarOpen] = useState(false);
 
   const sliderRef = useRef();
@@ -30,7 +30,7 @@ function Navbar() {
   };
 
   return (
-    <div id="Nav_Container">
+    <nav id="Nav">
       {/* Logo */}
       <img id="Logo" src={logo} alt="Logo" />
 
@@ -39,10 +39,14 @@ function Navbar() {
       {/* Desktop Links */}
       <ul id="Desk_Link">
         <li>
-          <Link to="/">Home</Link>
+          <Link style={{ color: props.homeColor }} to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link style={{ color: props.aboutColor }} to="/about">
+            About
+          </Link>
         </li>
       </ul>
 
@@ -67,7 +71,14 @@ function Navbar() {
         id="Mob_Slider"
         ref={sliderRef}
       >
-        <img id="Mob_Nav_Close" src={close} alt="Close" onClick={closeSlider} />
+        <figure>
+          <img
+            id="Mob_Nav_Close"
+            src={close}
+            alt="Close"
+            onClick={closeSlider}
+          />
+        </figure>
         <ul id="Mob_Link">
           <li>
             <Link onClick={closeSlider} to="/">
@@ -80,13 +91,13 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <Link onClick={closeSlider} to="/contact">
-          <button id="Mob_Navbtn">Contact us</button>
-        </Link>
+        <button id="Mob_Navbtn" onClick={closeSlider}>
+          <Link to="/contact">Contact us</Link>
+        </button>
       </section>
 
       {/* End of Mobile Navbar */}
-    </div>
+    </nav>
   );
 }
 

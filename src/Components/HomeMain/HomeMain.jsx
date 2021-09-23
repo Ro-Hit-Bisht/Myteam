@@ -13,7 +13,7 @@ function HomeMain() {
       <div id="Home_Main_Header">
         <div id="Home_Main_Dash"></div>
         <h2 id="Home_Main_Heading">
-          Build & manage distributed teams like no one else.
+          Build & manage <br /> distributed teams <br /> like no one else.
         </h2>
       </div>
       <div id="Home_Main_Articles">

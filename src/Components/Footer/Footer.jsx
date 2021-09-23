@@ -11,17 +11,21 @@ import facebook from "../../Assets/svgs/icon-facebook.svg";
 import pinterest from "../../Assets/svgs/icon-pinterest.svg";
 import twitter from "../../Assets/svgs/icon-twitter.svg";
 
-function Footer() {
+function Footer(props) {
   return (
     <>
       <section id="Logo_Link">
         <img src={logo} alt="Logo" />
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link style={{ color: props.homeColor }} to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link style={{ color: props.aboutColor }} to="/about">
+              About
+            </Link>
           </li>
         </ul>
       </section>
@@ -33,7 +37,7 @@ function Footer() {
         <ul>
           <li>
             <a href="https://www.facebook.com/">
-              <img src={facebook} alt="facebook" />
+              <img className="LOGO"src={facebook} alt="facebook" />
             </a>
           </li>
           <li>

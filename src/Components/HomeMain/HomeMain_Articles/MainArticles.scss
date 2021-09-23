@@ -1,24 +1,52 @@
-@use "../../../Sass/variable" as Var;
+@use "../../../Sass/Colors" as Color;
+@use "../../../Sass/Typography" as Font;
+
 #Home_Main_Article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
   img {
-    display: block;
-    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
   }
 
   div {
-    margin: 1rem 0 4rem 0;
+    width: 32rem;
 
     h3 {
-      margin: auto;
-      width: 70%;
-      text-align: center;
-      color: Var.$color-primary-coral;
+      color: Color.$color-primary-coral;
+      margin-bottom: 1rem;
+      font-size: Font.$smallest-heading;
+      font-weight: Font.$font-weight-semi-bold;
     }
 
     p {
-      margin: auto;
-      width: 70%;
-      text-align: center;
+      opacity: 0.8;
+      font-size: Font.$small-font-size;
+    }
+  }
+}
+
+@media screen and(max-width: "560px") {
+  #Home_Main_Article {
+    flex-direction: column;
+
+    img {
+      margin-bottom: 1rem;
+    }
+    div {
+      width: 90%;
+
+      h3 {
+        text-align: center;
+      }
+      p {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+      }
     }
   }
 }

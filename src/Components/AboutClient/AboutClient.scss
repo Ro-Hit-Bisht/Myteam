@@ -1,32 +1,55 @@
-@use "../../Sass/variable" as Var;
-@use "../../Sass/typography" as Typo;
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
 #About_Client {
-  color: Var.$color-primary-white;
-  background-color: Var.$color-secondary-dark-green-2;
+  padding: 1rem 0;
+  background-color: Color.$color-secondary-dark-green-2;
   background-image: url("../../Assets/svgs/bg-pattern-about-4.svg");
   background-repeat: no-repeat;
-  background-size: 30%;
-  overflow: hidden;
+  background-size: 13rem 13rem;
+  background-position-x: calc(0%);
+  background-position-y: calc(0%);
 
   h1 {
     text-align: center;
-    margin: 5rem 0 0 0;
+    padding: 5rem 10% 3rem;
+    font-size: Font.$small-heading;
+    font-weight: Font.$font-weight-semi-bold;
+    line-height: Font.$small-heading-line-height;
   }
 
   #Clients {
-    margin: 0 auto 5rem;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    align-content: space-between;
     flex-wrap: wrap;
+    padding: 0 10% 4rem;
 
     img {
-      margin: 4rem 0.5rem 0;
-      height: 1.5rem;
-      width: 6.5rem;
-      min-width: 100px;
-      min-height: 23px;
+      height: 2rem;
+      width: 13rem;
+      margin: 3rem 3rem;
+    }
+
+    img:hover {
+      transform: rotate(-5deg);
+    }
+  }
+}
+
+@media screen and (max-width: "560px") {
+  #About_Client {
+    background-position-x: calc(0% - 6.5rem);
+    background-position-y: calc(0% - 6.5rem);
+
+    h1 {
+      padding: 4rem 10% 3rem;
+    }
+
+    #Clients {
+      img {
+        margin: 1.5rem 3rem;
+      }
     }
   }
 }

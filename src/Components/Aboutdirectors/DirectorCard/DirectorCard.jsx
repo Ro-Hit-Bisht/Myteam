@@ -69,7 +69,7 @@ const CardsDetail = [
 ];
 
 function Card(props) {
-  const { id, img, name, position, quotes } = props;
+  const { img, name, position, quotes } = props;
 
   const [isFlip, setisFlip] = useState(false);
 
@@ -86,7 +86,7 @@ function Card(props) {
   };
 
   return (
-    <article className="Card_Container" id={`Grid${id + 1}`}>
+    <article className="Card_Container">
       <div className="Card" ref={cardRef}>
         <div className="Front_Face">
           <img className="Profil_Pic" src={img} alt={name} />

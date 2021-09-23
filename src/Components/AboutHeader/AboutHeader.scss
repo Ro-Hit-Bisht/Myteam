@@ -1,21 +1,61 @@
-@use "../../Sass/variable" as Var;
-@use "../../Sass/typography" as Typo;
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
-#About_Header_Heading {
-  text-align: center;
-  color: Var.$color-primary-white;
-  margin: 2rem 0 2rem 0;
+#About_Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 28% 8rem;
+  background-color: Color.$color-primary-green;
+  background-image: url("../../Assets/svgs/bg-pattern-mobile-nav-1-about-1.svg");
+  background-repeat: no-repeat;
+  background-size: 13rem 13rem;
+  background-position-x: calc(100% + 6.5rem);
+  background-position-y: calc(100%);
+
+  h1 {
+    font-size: Font.$big-heading;
+    font-weight: Font.$font-weight-semi-bold;
+  }
+
+  section {
+    width: 60%;
+
+    div {
+      height: 4px;
+      width: 50px;
+      margin-bottom: 3rem;
+      background-color: Color.$color-primary-coral;
+    }
+
+    p {
+      opacity: 1;
+    }
+  }
 }
 
-#About_Header_Para {
-  width: 80%;
-  text-align: center;
-  color: Var.$color-primary-white;
-  margin: 0 0 15rem 0;
+@media screen and (max-width: "560px") {
+  #About_Header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 10% 5rem;
+    background-position-x: calc(100% + 6.5rem);
+    background-position-y: calc(100% + 6.5rem);
 
-  div {
-    display: none;
-  }
-  p {
+    h1 {
+      margin-bottom: 4rem;
+    }
+
+    section {
+      width: 100%;
+
+      div {
+        display: none;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }

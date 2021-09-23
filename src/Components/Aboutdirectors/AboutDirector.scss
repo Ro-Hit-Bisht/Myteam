@@ -1,18 +1,45 @@
-@use "../../Sass/variable" as Var;
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
 #About_Director {
-  display: grid;
-  color: Var.$color-primary-white;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  row-gap: 5rem;
-  margin: 5rem 0 5rem 0;
+  padding: 6rem 0;
+  background-color: Color.$color-secondary-dark-green-1;
+  background-image: url("../../Assets/svgs/bg-pattern-about-2-contact-1.svg"),
+    url("../../Assets/svgs/bg-pattern-home-4-about-3.svg");
+  background-repeat: no-repeat;
+  background-size: 14rem 14rem, 12rem 10rem;
+  background-position-x: calc(0% - 7rem), calc(100%);
+  background-position-y: calc(0%), calc(100%);
 
-  #Grid1 {
+  h1 {
     text-align: center;
+    font-size: Font.$small-heading;
+    line-height: Font.$small-heading-line-height;
+    font-weight: Font.$font-weight-semi-bold;
+    margin-bottom: 5rem;
+  }
+
+  #Cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: "560px") {
+  #About_Director {
+    background-size: 14rem 14rem, 12rem 6rem;
+    background-position-x: calc(0% - 7rem), calc(100%);
+    background-position-y: calc(0% - 7rem), calc(100%);
 
     h1 {
-      font-size: 2rem;
+      padding: 0 5%;
+    }
+
+    #Cards {
+      justify-content: center;
+      padding: 0;
     }
   }
 }

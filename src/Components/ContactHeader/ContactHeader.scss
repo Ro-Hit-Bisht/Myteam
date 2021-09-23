@@ -1,0 +1,76 @@
+@use "../../Sass/Colors" as Color;
+@use "../../Sass/Typography" as Font;
+
+#Contact_Header {
+  width: 50%;
+  height: 40rem;
+  float: left;
+  padding: 2rem 0 0 20vw;
+  background-color: Color.$color-primary-green;
+  background-image: url("../../Assets/svgs/bg-pattern-about-2-contact-1.svg");
+  background-repeat: no-repeat;
+  background-size: 14rem 14rem;
+  background-position-x: calc(0% - 7rem);
+  background-position-y: calc(5%);
+
+  h1 {
+    margin-bottom: 5rem;
+    font-size: Font.$big-heading;
+  }
+
+  h2 {
+    padding-left: 0.5rem;
+    color: Color.$color-primary-coral;
+    margin-bottom: 3rem;
+    font-size: Font.$small-heading;
+    line-height: Font.$small-heading-line-height;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+      margin-right: 1rem;
+    }
+    h3 {
+    }
+  }
+}
+
+@media screen and (max-width: "560px") {
+  #Contact_Header {
+    width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+    padding: 3rem 5% 3rem;
+    background-image: none;
+
+    h1 {
+    }
+
+    h2 {
+      padding-left: 0;
+      margin-bottom: 3rem;
+    }
+
+    div {
+      // background-color: red;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      img {
+        height: 4rem;
+        width: 3.5rem;
+      }
+      h3 {
+        text-align: left;
+      }
+    }
+  }
+} ;

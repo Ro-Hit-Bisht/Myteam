@@ -14,59 +14,58 @@ import AboutHeader from "./Components/AboutHeader/AboutHeader";
 import AboutDirector from "./Components/Aboutdirectors/AboutDirector";
 import AboutClient from "./Components/AboutClient/AboutClient";
 import ContactSection from "./Components/ContactSection/ContactSection";
+import ContactHeader from "./Components/ContactHeader/ContactHeader";
 import ContactForm from "./Components/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
     <Router>
-      {/* Navbar */}
-      <nav id="Navbar">
-        <Navbar />
-      </nav>
-
-      {/* Header */}
-      <header id="Header">
-        <Switch>
-          <Route exact path="/">
+      <Switch>
+        {/* Home Page */}
+        <Route exact path="/">
+          <header id="Header">
+            <Navbar homeColor="#f67e7e" aboutColor="#fff" />
             <HomeHeader />
-          </Route>
-          <Route path="/about">
-            <AboutHeader />
-          </Route>
-        </Switch>
-      </header>
-
-      {/* Main */}
-      <main id="Main">
-        <Switch>
-          <Route exact path="/">
+          </header>
+          <main id="Main">
             <HomeMain />
             <HomeStories />
-          </Route>
-          <Route path="/about">
+            <ContactSection />
+          </main>
+          <footer id="Footer">
+            <Footer homeColor="#f67e7e" aboutColor="#fff" />
+          </footer>
+        </Route>
+        {/* About Page */}
+        <Route path="/about">
+          <header id="Header">
+            <Navbar homeColor="#fff" aboutColor="#f67e7e" />
+            <AboutHeader />
+          </header>
+          <main id="Main">
             <AboutDirector />
             <AboutClient />
-          </Route>
-          <Route path="/contact">
-            <ContactForm />
-          </Route>
-        </Switch>
-      </main>
-
-      {/*Contact Section*/}
-      <Switch>
-        <Route exact path={["/", "/about"]}>
-          <section id="Contact_Section">
             <ContactSection />
-          </section>
+          </main>
+          <footer id="Footer">
+            <Footer homeColor="#fff" aboutColor="#f67e7e" />
+          </footer>
+        </Route>
+        {/* Contact Page */}
+        <Route path="/contact">
+          <header id="Header">
+            <Navbar homeColor="#fff" aboutColor="#fff" />
+          </header>
+          <main id="Main">
+            <ContactHeader />
+            <ContactForm />
+          </main>
+          <footer id="Footer">
+            <Footer homeColor="#fff" aboutColor="#fff" />
+          </footer>
         </Route>
       </Switch>
-
-      {/* Footer */}
-      <footer id="Footer">
-        <Footer />
-      </footer>
     </Router>
   );
 };

@@ -1,20 +1,29 @@
 // Typography
-$heading-primary-large: 10rem;
 
-$heading-primary-line-height: 10rem;
-
-$heading-primary-small: 6.4rem;
-
-$heading-secondary: 4.8rem;
-
-$heading-secondary-line-height: 4.8rem;
-
-$heading-tertiary: 1.8rem;
-
+// Font-Family
 $font-family: "Livvic", sans-serif;
 
-$font-weight: 600;
+// Font-size
+$big-heading: 6rem;
 
-$font-size: 1.8rem;
+$small-heading: 3rem;
 
-$line-height: 2.8rem;
+$smallest-heading: 1.5rem;
+
+$font-size: 1.2rem;
+
+$small-font-size: 1.1rem;
+
+// Line-Height
+$big-heading-line-height: 6.5rem;
+
+$small-heading-line-height: 3.5rem;
+
+$line-height: 2rem;
+
+$Small-line-height: 1.8rem;
+
+// Font-Weight
+$font-weight-semi-bold: 600;
+
+$font-weight-medium: 500;

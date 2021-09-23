@@ -43,7 +43,6 @@ const newArticles = Articles.map((Article) => {
       <img src={img} alt={imgalt} />
       <div>
         <h3>{topic}</h3>
-        <br />
         <p>{explained}</p>
       </div>
     </article>

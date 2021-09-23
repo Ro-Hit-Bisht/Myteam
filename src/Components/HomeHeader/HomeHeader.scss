@@ -1,26 +1,76 @@
-@use "../../Sass/variable" as Var;
-@use "../../Sass/typography" as Typo;
+@use "../../Sass//Colors" as Color;
+@use "../../Sass/Typography" as Font;
 
-#Home_Header_Heading {
-  width: 50%;
-  text-align: center;
-  color: Var.$color-primary-white;
-  margin: 2rem 0 2rem 0;
+#Home_Header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 8rem;
+  background-color: Color.$color-primary-green;
+  background-image: url("../../Assets/svgs/bg-pattern-home-1.svg"),
+    url("../../Assets/svgs/bg-pattern-home-2.svg");
+  background-repeat: no-repeat;
+  background-size: 12rem 12rem, 23rem 6rem;
+  background-position-x: calc(0% - 6rem), calc(70%);
+  background-position-y: calc(0%), calc(100%);
 
-  mark {
-    background-color: transparent;
-    color: Var.$color-primary-coral;
+  #Home_Header_Heading {
+    height: 100%;
+    padding: 0rem 5rem 0 0;
+    font-size: Font.$big-heading;
+    font-weight: Font.$font-weight-semi-bold;
+    line-height: Font.$big-heading-line-height;
+
+    mark {
+      color: Color.$color-primary-coral;
+      background-color: transparent;
+    }
+  }
+
+  #Home_Header_Para {
+    height: 100%;
+    width: 35rem;
+    line-height: Font.$line-height;
+    padding: 1rem 0 0 5rem;
+
+    div {
+      height: 3.5px;
+      width: 50px;
+      background-color: Color.$color-secondary-light-blue;
+      margin-bottom: 4rem;
+    }
+
+    p {
+      opacity: 1;
+    }
   }
 }
-#Home_Header_Para {
-  width: 80%;
-  text-align: center;
-  color: Var.$color-primary-white;
-  margin: 0 0 15rem 0;
 
-  div {
-    display: none;
-  }
-  p {
+@media screen and (max-width: "560px") {
+  #Home_Header {
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../Assets/svgs/bg-pattern-home-2.svg");
+    background-size: 20rem 6rem;
+    background-position-x: center;
+    background-position-y: calc(100%);
+
+    #Home_Header_Heading {
+      text-align: center;
+      padding: 0 0 3rem 0;
+    }
+
+    #Home_Header_Para {
+      width: 100%;
+      padding: 0 10% 3rem;
+
+      div {
+        display: none;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
   }
 }
