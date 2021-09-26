@@ -74,15 +74,18 @@ function Card(props) {
   const [isFlip, setisFlip] = useState(false);
 
   const cardRef = useRef();
+  const flipBtn = useRef();
 
   const Flip = () => {
     setisFlip(true);
     cardRef.current.style.transform = "rotateY(180deg)";
+    flipBtn.current.style.backgroundColor = "#79c8c7";
   };
 
   const unFlip = () => {
     setisFlip(false);
     cardRef.current.style.transform = "rotateY(0deg)";
+    flipBtn.current.style.backgroundColor = "#f67e7e";
   };
 
   return (
@@ -92,14 +95,7 @@ function Card(props) {
           <img className="Profil_Pic" src={img} alt={name} />
           <h3>{name}</h3>
           <p>{position}</p>
-          <button
-            style={
-              isFlip
-                ? { backgroundColor: "#79c8c7" }
-                : { backgroundColor: "#f67e7e" }
-            }
-            onClick={isFlip ? unFlip : Flip}
-          >
+          <button ref={flipBtn} onClick={isFlip ? unFlip : Flip}>
             <img src={isFlip ? cross : plus} alt={isFlip ? "cross" : "plus"} />
           </button>
         </div>
@@ -108,12 +104,12 @@ function Card(props) {
           <p>{quotes}</p>
           <ul>
             <li>
-              <a href="www.twitter.com">
+              <a href="https://www.twitter.com/">
                 <img src={twitter} alt="Twitter" />
               </a>
             </li>
             <li>
-              <a href="www.linkedin.com">
+              <a href="https://www.linkedin.com/">
                 <img src={linkedin} alt="Linkedin" />
               </a>
             </li>

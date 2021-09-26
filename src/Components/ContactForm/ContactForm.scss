@@ -12,6 +12,7 @@
   background-size: 15rem 16rem;
   background-position-x: calc(100% + 7.5rem);
   background-position-y: calc(100%);
+  // overflow: hidden;
 
   form {
     display: flex;
@@ -62,11 +63,50 @@
       border-radius: 1.5rem;
       margin: 3rem 0rem;
       cursor: pointer;
+      transition: transform 1s ease;
+      animation: formBtn 1.5s cubic-bezier(0.87, 0.34, 0.65, 1.53);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: Color.$color-primary-coral;
+    }
+  }
+
+  @keyframes formBtn {
+    0% {
+      transform: translateY(30rem);
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "958px") {
+  #Contact_Form {
+    padding: 2rem 0 0 10%;
+
+    form {
+      input {
+        width: 70%;
+      }
+
+      textarea {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "881px") {
   #Contact_Form {
     width: 100%;
     height: auto;

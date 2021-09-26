@@ -13,12 +13,6 @@ body {
     position: relative;
     overflow: hidden;
 
-    #Header {
-    }
-
-    #Main {
-    }
-
     #Footer {
       background-color: Color.$color-secondary-dark-green-3;
       width: 100%;
@@ -30,27 +24,9 @@ body {
   }
 }
 
-@media screen and (max-width: "850px") {
-}
-
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "761px") {
   body {
-    font-family: Font.$font-family;
-    font-weight: Font.$font-weight-medium;
-    font-size: Font.$font-size;
-    line-height: Font.$line-height;
-
     #Root {
-      color: Color.$color-primary-white;
-      position: relative;
-      overflow: hidden;
-
-      #Header {
-      }
-
-      #Main {
-      }
-
       #Footer {
         flex-direction: column;
         align-items: center;

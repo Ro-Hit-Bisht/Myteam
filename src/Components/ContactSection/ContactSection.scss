@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 5rem 5%;
+  padding: 5rem 15%;
   background-color: Color.$color-primary-coral;
   background-image: url("../../Assets/svgs/bg-pattern-contact-section.svg");
   background-repeat: no-repeat;
@@ -40,11 +40,48 @@
   }
 
   #Contact_Section_Btn:hover {
-    transform: scale(1.05, 1.05);
+    transform: scale(1.1);
     a {
       color: Color.$color-primary-white;
     }
     background-color: Color.$color-secondary-dark-green-3;
+  }
+}
+
+@media screen and (max-width: "1144px") {
+  #Contact_Section {
+    padding: 5rem 5%;
+    background-size: 10rem 8rem;
+  }
+}
+
+@media screen and (max-width: "827px") {
+  #Contact_Section {
+    background-size: 14rem 10rem;
+  }
+}
+
+@media screen and (max-width: "736px") {
+  #Contact_Section {
+    background-size: 10rem 8rem;
+    justify-content: space-around;
+    padding: 5rem 0%;
+
+    #Contact_Section_Btn {
+      margin: 0 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: "617px") {
+  #Contact_Section {
+    #Contact_Section_Heading {
+      padding: 0 1.5rem;
+    }
+
+    #Contact_Section_Btn {
+      margin: 0 3rem 0 0;
+    }
   }
 }
 
@@ -53,7 +90,6 @@
     flex-direction: column;
     justify-content: center;
     padding: 3rem 5%;
-    background-size: 10rem 8rem;
 
     #Contact_Section_Heading {
       padding: 0;

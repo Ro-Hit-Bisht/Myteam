@@ -3,8 +3,8 @@
 
 #Home_Main {
   display: flex;
-  justify-content: space-evenly;
-  padding: 6rem 20%;
+  justify-content: center;
+  padding: 6rem 10%;
   background-color: Color.$color-secondary-dark-green-2;
   background-image: url("../../Assets/svgs/bg-pattern-home-3.svg");
   background-repeat: no-repeat;
@@ -13,11 +13,14 @@
   background-position-y: calc(100%);
 
   #Home_Main_Header {
+    padding: 0 5rem 0 0;
+
     #Home_Main_Dash {
-      height: 5px;
-      width: 60px;
+      height: 3.5px;
+      width: 55px;
       background-color: Color.$color-primary-coral;
       margin-bottom: 3rem;
+      animation: mainDash 1.5s ease;
     }
 
     #Home_Main_Heading {
@@ -28,20 +31,65 @@
   }
 
   #Home_Main_Articles {
+    padding: 0 0 0 5rem;
     margin: 1rem 0 1rem 0;
+  }
+
+  @keyframes mainDash {
+    0% {
+      transform: translate(32rem, -10rem) rotate(0deg);
+    }
+
+    20% {
+      transform: translate(28rem, 0) rotate(720deg);
+    }
+
+    90% {
+      transform: translate(-10rem, 0) rotate(180deg);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: "1340px") {
+  #Home_Main {
+    padding: 6rem 10%;
+
+    #Home_Main_Header {
+      padding: 0 4rem 0 0;
+    }
+
+    #Home_Main_Articles {
+      padding: 0 0 0 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: "1289px") {
+  #Home_Main {
+    padding: 6rem 10%;
+
+    #Home_Main_Header {
+      padding: 0 3rem 0 0;
+    }
+
+    #Home_Main_Articles {
+      padding: 0 0 0 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: "1038px") {
   #Home_Main {
     flex-direction: column;
     padding: 5rem 0;
-    background-size: 10rem 12rem;
-    background-position-x: calc(100% + 5rem);
     background-position-y: calc(0%);
 
     #Home_Main_Header {
-      margin: 0 0 3rem 1rem;
+      margin: 0 0 3rem 3rem;
       #Home_Main_Heading {
         width: 90%;
       }
@@ -51,8 +99,28 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: "560px") {
+  #Home_Main {
+    flex-direction: column;
+    padding: 5rem 0;
+    background-size: 10rem 12rem;
+    background-position-x: calc(100% + 5rem);
+    background-position-y: calc(0%);
+
+    #Home_Main_Header {
+      margin: 0 0 3rem 1rem;
+    }
+
+    #Home_Main_Articles {
+      align-items: center;
+
+      padding: 0;
     }
   }
 }

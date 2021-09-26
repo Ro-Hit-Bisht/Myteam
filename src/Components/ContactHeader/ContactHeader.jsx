@@ -1,5 +1,5 @@
 // Dependencies
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 // Stylesheet
 import "./ContactHeader.scss";
@@ -13,23 +13,25 @@ function ContactHeader() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <section id="Contact_Header">
       <h1>Contact</h1>
       <h2>Ask us about</h2>
-      <div>
-        <img src={svgman} alt="person svg" />
-        <h3>The quality of our talent network</h3>
-      </div>
-      <div>
-        <img src={svgcog} alt="cog svg" />
-        <h3>Usage & implementation of our software</h3>
-      </div>
-      <div>
-        <img src={svgchart} alt="chart svg" />
-        <h3>How we help drive innovation</h3>
-      </div>
+      <section id="Divs">
+        <div>
+          <img src={svgman} alt="person svg" />
+          <h3>The quality of our talent network</h3>
+        </div>
+        <div>
+          <img src={svgcog} alt="cog svg" />
+          <h3>Usage & implementation of our software</h3>
+        </div>
+        <div>
+          <img src={svgchart} alt="chart svg" />
+          <h3>How we help drive innovation</h3>
+        </div>
+      </section>
     </section>
   );
 }

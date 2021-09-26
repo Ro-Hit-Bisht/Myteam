@@ -34,19 +34,19 @@ function Footer(props) {
         Us : 949-833-7432
       </p>
       <section id="Social_Links">
-        <ul>
-          <li>
+        <ul id="Icon_Container">
+          <li className="Icon">
             <a href="https://www.facebook.com/">
-              <img className="LOGO"src={facebook} alt="facebook" />
+              <img src={facebook} alt="facebook" />
             </a>
           </li>
-          <li>
-            <a href="www.pinterest.com">
+          <li className="Icon">
+            <a href="https://www.pinterest.com/">
               <img src={pinterest} alt="pinterest" />
             </a>
           </li>
-          <li>
-            <a href="www.twitter.com">
+          <li className="Icon">
+            <a href="https://www.twitter.com/">
               <img src={twitter} alt="twitter" />
             </a>
           </li>

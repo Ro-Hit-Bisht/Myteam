@@ -29,6 +29,20 @@
   }
 }
 
+@media screen and (max-width: "1038px") {
+  #Home_Main_Article {
+    div {
+      width: 90%;
+      margin: auto;
+
+      p {
+        width: 90%;
+        text-align: left;
+      }
+    }
+  }
+}
+
 @media screen and(max-width: "560px") {
   #Home_Main_Article {
     flex-direction: column;

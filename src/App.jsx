@@ -25,7 +25,7 @@ const App = () => {
         {/* Home Page */}
         <Route exact path="/">
           <header id="Header">
-            <Navbar homeColor="#f67e7e" aboutColor="#fff" />
+            <Navbar homeColor="#f67e7e" />
             <HomeHeader />
           </header>
           <main id="Main">
@@ -34,13 +34,13 @@ const App = () => {
             <ContactSection />
           </main>
           <footer id="Footer">
-            <Footer homeColor="#f67e7e" aboutColor="#fff" />
+            <Footer homeColor="#f67e7e" />
           </footer>
         </Route>
         {/* About Page */}
         <Route path="/about">
           <header id="Header">
-            <Navbar homeColor="#fff" aboutColor="#f67e7e" />
+            <Navbar aboutColor="#f67e7e" />
             <AboutHeader />
           </header>
           <main id="Main">
@@ -49,7 +49,7 @@ const App = () => {
             <ContactSection />
           </main>
           <footer id="Footer">
-            <Footer homeColor="#fff" aboutColor="#f67e7e" />
+            <Footer aboutColor="#f67e7e" />
           </footer>
         </Route>
         {/* Contact Page */}

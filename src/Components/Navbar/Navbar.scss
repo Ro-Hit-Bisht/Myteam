@@ -11,22 +11,34 @@
 
   #Logo {
     padding: 0 4rem 0 4rem;
+    transform: translate();
+    animation: alignLogo 1.5s ease;
   }
 
   #Desk_Link {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 24% 0 0;
+    margin: 0 35rem 0 0;
+    animation: dropDeskLink 1.5s cubic-bezier(0.87, 0.34, 0.65, 1.53);
 
     li {
       list-style: none;
       padding: 0 1rem;
 
       a {
+        color: Color.$color-primary-white;
         font-weight: Font.$font-weight-semi-bold;
         text-decoration: none;
         transition: transform 1s ease;
+      }
+    }
+
+    li:hover {
+      transform: scale(1.1) rotate(-5deg);
+
+      a {
+        color: Color.$color-primary-coral;
       }
     }
   }
@@ -40,6 +52,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: transform 1s ease;
+    animation: alignContact 1.5s ease;
 
     a {
       font-size: Font.$font-size;
@@ -50,8 +63,9 @@
   }
 
   #Desk_Navbtn:hover {
-    transform: scale(1.05, 1.01);
+    transform: scale(1.1);
     background-color: Color.$color-primary-white;
+
     a {
       color: Color.$color-secondary-dark-green-2;
     }
@@ -64,15 +78,76 @@
   #Mob_Slider {
     display: none;
   }
+
+  // Animation
+  @keyframes dropDeskLink {
+    0% {
+      transform: translateY(-8rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes alignContact {
+    0% {
+      transform: translate(-60rem, -18rem) rotate(0);
+    }
+    100% {
+      transform: translate(0, 0) rotate(1080deg);
+    }
+  }
+
+  @keyframes alignLogo {
+    0% {
+      transform: translate(60rem, -18rem) rotate(0);
+    }
+    100% {
+      transform: translate(0, 0) rotate(1080deg);
+    }
+  }
 }
-@media screen and (max-width: "1700px") {
+
+@media screen and (max-width: "1262px") {
+  #Nav {
+    #Desk_Link {
+      margin: 0 20rem 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: "1045px") {
+  #Nav {
+    #Desk_Link {
+      margin: 0 10rem 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: "958px") {
   #Nav {
     #Logo {
-      padding: 0 2rem 0 ;
+      padding: 0 4rem 0 4rem;
     }
 
     #Desk_Link {
-      margin: 0 1% 0 0;
+      margin: 0 10% 0 0;
+    }
+
+    #Desk_Navbtn {
+      margin: 0 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: "812px") {
+  #Nav {
+    #Logo {
+      padding: 0 2rem 0 2rem;
+    }
+
+    #Desk_Link {
+      margin: 0 10% 0 0;
     }
 
     #Desk_Navbtn {
@@ -81,7 +156,7 @@
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "678px") {
   #Nav {
     justify-content: space-between;
     padding: 0 8vw;
@@ -103,10 +178,15 @@
       display: initial;
       cursor: pointer;
       user-select: none;
+
+      animation: burgerAlign 1.5s ease;
+    }
+
+    #Mob_Nav_Burger:hover {
+      filter: invert(49%) sepia(45%) saturate(528%) hue-rotate(314deg) brightness(110%) contrast(93%);
     }
 
     #Mob_Slider {
-      display: initial;
       position: absolute;
       width: 17rem;
       height: 100vh;
@@ -132,6 +212,11 @@
           margin-right: 11vw;
           transform: translateY(-50%);
           cursor: pointer;
+          animation: closeAlign 1s ease;
+        }
+
+        #Mob_Nav_Close:hover {
+          filter: invert(49%) sepia(45%) saturate(528%) hue-rotate(314deg) brightness(110%) contrast(93%);
         }
       }
 
@@ -141,10 +226,21 @@
         li {
           list-style: none;
           margin-bottom: 10%;
+          width: fit-content;
+          animation: mobLink 1s cubic-bezier(0.87, 0.34, 0.65, 1.53);
 
           a {
             text-decoration: none;
             color: Color.$color-primary-white;
+            font-weight: Font.$font-weight-semi-bold;
+          }
+        }
+
+        li:hover {
+          transform: scale(1.1) rotate(-5deg);
+
+          a {
+            color: Color.$color-primary-coral;
           }
         }
       }
@@ -157,6 +253,9 @@
         background-color: transparent;
         cursor: pointer;
         margin: 0 15%;
+        transition: transform 1s ease;
+        cursor: pointer;
+        animation: mobNavBtn 1s ease;
 
         a {
           text-decoration: none;
@@ -164,6 +263,67 @@
           font-size: Font.$font-size;
           font-weight: Font.$font-weight-semi-bold;
         }
+      }
+
+      #Mob_Navbtn:hover {
+        transform: scale(1.1);
+        background-color: Color.$color-primary-white;
+
+        a {
+          color: Color.$color-secondary-dark-green-2;
+        }
+      }
+    }
+
+    @keyframes burgerAlign {
+      0% {
+        transform: translate(-50vw, -7rem) rotate(-360deg);
+      }
+
+      80% {
+        transform: translate(8vw, -3rem) rotate(360deg);
+      }
+
+      100% {
+        transform: translate(0) rotate(0);
+      }
+    }
+
+    @keyframes closeAlign {
+      0% {
+        transform: translate(11vw, -9rem) rotate(-360deg);
+      }
+
+      50% {
+        transform: translate(calc(-17rem + 14.5vw), -3rem) rotate(360deg);
+      }
+
+      100% {
+        transform: translate(0, -50%) rotate(0);
+      }
+    }
+
+    @keyframes mobLink {
+      0% {
+        transform: translateX(17rem);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes mobNavBtn {
+      0% {
+        transform: translateY(17rem);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   }

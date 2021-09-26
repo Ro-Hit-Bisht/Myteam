@@ -5,7 +5,7 @@
   width: 50%;
   height: 40rem;
   float: left;
-  padding: 2rem 0 0 20vw;
+  padding: 4rem 0 0 22%;
   background-color: Color.$color-primary-green;
   background-image: url("../../Assets/svgs/bg-pattern-about-2-contact-1.svg");
   background-repeat: no-repeat;
@@ -16,32 +16,59 @@
   h1 {
     margin-bottom: 5rem;
     font-size: Font.$big-heading;
+    animation: contactBigHeader 1.5s ease;
+    width: fit-content;
   }
 
   h2 {
+    width: fit-content;
     padding-left: 0.5rem;
     color: Color.$color-primary-coral;
     margin-bottom: 3rem;
     font-size: Font.$small-heading;
     line-height: Font.$small-heading-line-height;
+    animation: contactSmallHeader 1.5s ease;
   }
 
   div {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    padding: 0 5% 0 0;
 
     img {
       height: 4rem;
       width: 4rem;
       margin-right: 1rem;
     }
-    h3 {
+  }
+
+  @keyframes contactBigHeader {
+    0% {
+      transform: translate(35rem, -43rem) rotate(0);
+    }
+    100% {
+      transform: translate(0) rotate(720deg);
+    }
+  }
+
+  @keyframes contactSmallHeader {
+    0% {
+      transform: translate(-35rem, -43rem) rotate(720deg);
+    }
+    100% {
+      transform: translate(0) rotate(0);
     }
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "1381px") {
+  #Contact_Header {
+    padding: 4rem 0 0 10%;
+  }
+}
+
+@media screen and (max-width: "881px") {
   #Contact_Header {
     width: 100%;
     height: auto;
@@ -51,26 +78,39 @@
     background-image: none;
 
     h1 {
+      margin: 0 auto 5rem;
     }
 
     h2 {
+      margin: 0 auto 3rem;
       padding-left: 0;
       margin-bottom: 3rem;
     }
 
-    div {
-      // background-color: red;
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
+    #Divs {
+      width: fit-content;
+      margin: auto;
 
-      img {
-        height: 4rem;
-        width: 3.5rem;
-      }
-      h3 {
-        text-align: left;
+      div {
+        padding: 0;
+        width: fit-content;
+
+        img {
+          height: 4rem;
+          width: 3.5rem;
+        }
+        h3 {
+          text-align: left;
+        }
       }
     }
   }
-} ;
+}
+
+@media screen and (max-width: "456px") {
+  #Contact_Header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}

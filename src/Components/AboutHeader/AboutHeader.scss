@@ -4,8 +4,8 @@
 #About_Header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 1rem 28% 8rem;
+  justify-content: space-evenly;
+  padding: 1rem 20% 8rem;
   background-color: Color.$color-primary-green;
   background-image: url("../../Assets/svgs/bg-pattern-mobile-nav-1-about-1.svg");
   background-repeat: no-repeat;
@@ -16,25 +16,89 @@
   h1 {
     font-size: Font.$big-heading;
     font-weight: Font.$font-weight-semi-bold;
+    animation: aboutHeader 1.5s ease;
   }
 
   section {
-    width: 60%;
+    width: 45%;
 
     div {
       height: 4px;
       width: 50px;
       margin-bottom: 3rem;
       background-color: Color.$color-primary-coral;
+      animation: aboutDash 1.5s ease;
     }
 
     p {
+      animation: aboutPara 1.5s ease;
+    }
+  }
+
+  @keyframes aboutDash {
+    0% {
+      transform: translate(-35rem, 3rem) rotate(0deg);
+      opacity: 0;
+    }
+
+    20% {
+      transform: translate(-35rem, 12rem) rotate(360deg);
       opacity: 1;
+    }
+
+    80% {
+      transform: translate(-10rem, 12rem) rotate(720deg);
+    }
+
+    100% {
+      transform: translate(0) rotate(0deg);
+    }
+  }
+
+  @keyframes aboutHeader {
+    0% {
+      transform: translate(-55rem, -25rem) rotate(0);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(720deg);
+    }
+  }
+
+  @keyframes aboutPara {
+    0% {
+      transform: translate(55rem, -25rem) rotate(720deg);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(0);
     }
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "1664px") {
+  #About_Header {
+    padding: 1rem 20% 8rem;
+    justify-content: space-between;
+
+    section {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: "1525px") {
+  #About_Header {
+    padding: 1rem 10% 8rem;
+    justify-content: space-evenly;
+
+    section {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: "1118px") {
   #About_Header {
     flex-direction: column;
     justify-content: center;
@@ -55,6 +119,7 @@
 
       p {
         margin-bottom: 2rem;
+        text-align: center;
       }
     }
   }

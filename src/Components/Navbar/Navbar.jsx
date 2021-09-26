@@ -65,8 +65,14 @@ function Navbar(props) {
       <section
         style={
           NavbarOpen
-            ? { transform: "translateX(-100%)" }
-            : { transform: "translateX(0%)" }
+            ? {
+                transform: "translateX(-100%)",
+                display: "initial",
+              }
+            : {
+                transform: "translateX(0%)",
+                display: "none",
+              }
         }
         id="Mob_Slider"
         ref={sliderRef}
@@ -81,12 +87,20 @@ function Navbar(props) {
         </figure>
         <ul id="Mob_Link">
           <li>
-            <Link onClick={closeSlider} to="/">
+            <Link
+              style={{ color: props.homeColor }}
+              onClick={closeSlider}
+              to="/"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link onClick={closeSlider} to="/about">
+            <Link
+              style={{ color: props.aboutColor }}
+              onClick={closeSlider}
+              to="/about"
+            >
               About
             </Link>
           </li>

@@ -13,33 +13,75 @@
 
   h1 {
     text-align: center;
-    font-size: Font.$small-heading;
-    line-height: Font.$small-heading-line-height;
+    font-size: Font.$big-heading;
+    line-height: Font.$big-heading-line-height;
     font-weight: Font.$font-weight-semi-bold;
     margin-bottom: 5rem;
+    padding: 0 5%;
   }
 
   #Cards {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0 10%;
+    padding: 0 15%;
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "1882px") {
   #About_Director {
-    background-size: 14rem 14rem, 12rem 6rem;
-    background-position-x: calc(0% - 7rem), calc(100%);
-    background-position-y: calc(0% - 7rem), calc(100%);
+    #Cards {
+      justify-content: space-evenly;
+      padding: 0 10%;
+    }
+  }
+}
 
-    h1 {
+@media screen and (max-width: "1658px") {
+  #About_Director {
+    #Cards {
+      justify-content: space-evenly;
       padding: 0 5%;
     }
+  }
+}
 
+@media screen and (max-width: "1468px") {
+  #About_Director {
+    #Cards {
+      justify-content: space-evenly;
+      padding: 0 0%;
+    }
+  }
+}
+
+@media screen and (max-width: "1323px") {
+  #About_Director {
     #Cards {
       justify-content: center;
       padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: "633px") {
+  #About_Director {
+    h1 {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+    background-size: 14rem 14rem, 12rem 6rem;
+    background-position-x: calc(0% - 7rem), calc(100%);
+    background-position-y: calc(0% - 7rem), calc(100%);
+  }
+}
+
+@media screen and (max-width: "336px") {
+  #About_Director {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
     }
   }
 }

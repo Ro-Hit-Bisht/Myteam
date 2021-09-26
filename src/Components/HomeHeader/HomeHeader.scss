@@ -16,10 +16,11 @@
 
   #Home_Header_Heading {
     height: 100%;
-    padding: 0rem 5rem 0 0;
+    padding: 0rem 7rem 0 0;
     font-size: Font.$big-heading;
     font-weight: Font.$font-weight-semi-bold;
     line-height: Font.$big-heading-line-height;
+    animation: homeHeader 1.5s ease;
 
     mark {
       color: Color.$color-primary-coral;
@@ -31,29 +32,102 @@
     height: 100%;
     width: 35rem;
     line-height: Font.$line-height;
-    padding: 1rem 0 0 5rem;
+    padding: 1rem 2rem 0 5rem;
 
     div {
-      height: 3.5px;
-      width: 50px;
+      height: 3px;
+      width: 55px;
       background-color: Color.$color-secondary-light-blue;
       margin-bottom: 4rem;
+      animation: alignDash 1.5s ease;
     }
 
     p {
+      animation: homePara 1.5s ease;
+    }
+  }
+
+  @keyframes alignDash {
+    0% {
+      opacity: 0;
+      transform: translate(-36rem, 0rem) rotate(0);
+    }
+
+    20% {
       opacity: 1;
+      transform: translate(-36rem, 5rem) rotate(360deg);
+    }
+
+    90% {
+      transform: translate(-5rem, 5rem) rotate(0);
+    }
+
+    100% {
+      transform: translate(0, 0) rotate(720deg);
+    }
+  }
+
+  @keyframes homeHeader {
+    0% {
+      transform: translate(-85rem, -55rem) rotate(0);
+    }
+    100% {
+      transform: translate(0, 0) rotate(720deg);
+    }
+  }
+
+  @keyframes homePara {
+    0% {
+      transform: translate(55rem, -55rem) rotate(720deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0);
     }
   }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "1377px") {
+  #Home_Header {
+    #Home_Header_Heading {
+      padding: 0rem 4rem 0 0;
+    }
+
+    #Home_Header_Para {
+      padding: 1rem 2rem 0 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: "1298px") {
+  #Home_Header {
+    #Home_Header_Heading {
+      padding: 0rem 2rem 0 0;
+    }
+
+    #Home_Header_Para {
+      padding: 1rem 2rem 0 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: "1256px") {
+  #Home_Header {
+    #Home_Header_Para {
+      width: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: "1156px") {
   #Home_Header {
     flex-direction: column;
     align-items: center;
-    background-image: url("../../Assets/svgs/bg-pattern-home-2.svg");
-    background-size: 20rem 6rem;
-    background-position-x: center;
-    background-position-y: calc(100%);
+    background-image: url("../../Assets/svgs/bg-pattern-home-1.svg"),
+      url("../../Assets/svgs/bg-pattern-home-2.svg");
+    background-repeat: no-repeat;
+    background-size: 12rem 12rem, 23rem 6rem;
+    background-position-x: calc(0% - 6rem), center;
+    background-position-y: calc(0%), calc(100%);
 
     #Home_Header_Heading {
       text-align: center;
@@ -72,5 +146,14 @@
         text-align: center;
       }
     }
+  }
+}
+
+@media screen and (max-width: "801px") {
+  #Home_Header {
+    background-image: url("../../Assets/svgs/bg-pattern-home-2.svg");
+    background-size: 23rem 6rem;
+    background-position-x: center;
+    background-position-y: calc(100%);
   }
 }

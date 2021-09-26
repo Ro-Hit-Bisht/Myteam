@@ -18,49 +18,105 @@
 
       a {
         text-decoration: none;
+        color: Color.$color-primary-white;
       }
     }
 
     li:hover {
       transform: scale(1.1) rotate(5deg);
+
+      a {
+        color: Color.$color-primary-coral;
+      }
     }
   }
 }
 
 #Contact_Info {
   opacity: 0.6;
-  margin: 0 24% 0 1rem;
+  margin: 0 35rem 0 1rem;
   font-size: Font.$small-font-size;
   line-height: Font.$Small-line-height;
 }
 
 #Social_Links {
-  ul {
+  #Icon_Container {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.6rem;
+    height: 1.7rem;
 
-    li {
+    .Icon {
       list-style: none;
       margin: 0 0.5rem;
-      transition: transform 1s ease;
-      transform-origin: 50% 35%;
+      height: 100%;
+      transition: all 0.5s ease;
+
+      a {
+        height: 100%;
+        width: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
 
-    li:hover {
+    .Icon:hover {
       transform: rotate(720deg) scale(1.1);
+      a {
+        img {
+          filter: invert(49%) sepia(45%) saturate(528%) hue-rotate(314deg) brightness(110%) contrast(93%);
+        }
+      }
     }
+  }
+
+  p {
+    opacity: 0.6;
+    font-size: Font.$small-font-size;
+    line-height: Font.$Small-line-height;
   }
 }
 
-p {
-  opacity: 0.6;
-  font-size: Font.$small-font-size;
-  line-height: Font.$Small-line-height;
+@media screen and (max-width: "1516px") {
+  #Contact_Info {
+    margin: 0 20rem 0 1rem;
+  }
 }
 
-@media screen and (max-width: "560px") {
+@media screen and (max-width: "1201px") {
+  #Contact_Info {
+    margin: 0 10rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: "1183px") {
+  #Contact_Info {
+    margin: 0 10% 0 1rem;
+  }
+}
+
+@media screen and (max-width: "981px") {
+  #Logo_Link {
+    margin: 0 2rem;
+  }
+  #Contact_Info {
+    margin: 0 10% 0 1rem;
+  }
+}
+
+@media screen and (max-width: "865px") {
+  #Logo_Link {
+    margin: 0 1rem;
+  }
+  #Contact_Info {
+    margin: 0 5% 0 1rem;
+  }
+}
+
+@media screen and (max-width: "761px") {
   #Logo_Link {
     margin: 0 0 1.5rem 0;
 
@@ -76,14 +132,14 @@ p {
 
   #Social_Links {
     padding: 0 5%;
-    ul {
+    #Icon_Container {
       justify-content: center;
       margin-bottom: 1rem;
     }
-  }
 
-  p {
-    padding: 0%;
-    text-align: center;
+    p {
+      padding: 0%;
+      text-align: center;
+    }
   }
 }
