@@ -1,3 +1,7 @@
+# Here is The Live Preview of The Website
+
+[Click Here](https://myteam-frontend.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
